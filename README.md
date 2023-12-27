@@ -1,2 +1,2 @@
 # CommandLine-QOL
-Lab Presentation on Improving command-line usage (Jan 15th)
+Lab presentation on improving command-line usage (Jan 15th)
