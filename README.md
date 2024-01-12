@@ -95,12 +95,15 @@ You can change these bindings in the ~/.tmux_config, like the ~/.bashrc we've se
 # Part 3: Slurm / Alliance Compute Clusters
 
 Check the memory usage in your cluster
+
 `diskusage_report --per-user`
 
 Create an interactive job
+
 `salloc --time=00:15:00 --mem=1G --account=def-gsarah`
 
 Submit a batch job with contents in submit_job_test.sh file
+
 `sbatch submit_job_test.sh`
 
 
@@ -129,17 +132,90 @@ Time limits for dedicated resource partitions
 Arrays are a useful tool to save time for your processes via parallelization, or launching many jobs at once.
 
 This script will create text files with names output1.txt, output2.txt, ... , output8.txt with the job ID inside in the current directory. It will also send you an email when is output is finished if you put your information (sorry)
+
 `sbatch submit_array_test.sh`
 
 If you're using Beluga or Narval, you can see your job submission status online!
 - https://portail.beluga.calculquebec.ca/
 - https://portail.narval.calculquebec.ca/ 
 
-# Fairshare, htop and top
+# Part 3.5: Fairshare, htop and top
+
+To look at Fairshare usage
+
+`sshare -l -A def-gsarah_cpu -a`
+
+Look at job resource efficiency using either top or htop
+
+`top -u justb11`
+`htop -u justb11`
 
 
+# Part 4 : VSCode
 
 
+### Connecting to SSH
+1. Go to the extensions tab (on the left)
+
+2. Look up “Remote-SSH extension”
+
+3. Install
+
+4. Go to top search bar and search:
+
+`> Remote-SSH: Add New SSH Host`
+
+5. Connect to wanted cluster via your login information
+
+6. To connect to host:
+
+`> Remote-SSH : Connect to host`
+
+7. Enter password at top pop-up.
+
+Slide up the hidden terminal on the bottom and there’s your terminal with all the settings you set in your ~/.bashrc
+
+If you click the file tab on the left, you can list a file directory of your choice (I usually just do the base of the directory).
+
+### Installing R
+
+1. Download the R extension and R Debugger from the extension tab and follow the instructions on the extension page.
+
+2. Load R module in the terminal
+
+`module load r/4.3.1`
+
+3. Run an r session in the terminal
+
+`r`
+
+4. While in R, enter this command
+
+`install.packges("languageserver") # this will take about 6-8 minutes`
+
+then select yes to both options, then enter 13 to select a Canadian mirror to install from.
+
+5. Quit R session by entering
+
+`q()`
+
+then answer `n`
+
+6. While in VSCode, do ctrl & “,” to open settings.
+
+7. Open the “Remote [SSH: <cluster name>]” Tab
+
+8. Look up “Rpath” in the search bar.
+
+9. In the linux text box, enter “~/”
+
+10. In the search box, enter “r.rterm” then enter this line:
+
+`/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/r/4.3.1/bin/R`
+
+Note: you will need to update this value when you want to update your R.
+
+To use R, don't forget the select the R terminal on the top right of your terminal section.
 
 
 
