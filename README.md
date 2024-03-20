@@ -161,17 +161,21 @@ Look at job resource efficiency using either top or htop
 
 3. Install
 
-4. Go to top search bar and search:
+4a. Go to top search bar and search:
 
 `> Remote-SSH: Add New SSH Host`
 
-5. Connect to wanted cluster via your login information
+5a. If you're using a server that uses two factor authentication - go to setting with ctrl & “,” 
 
-6. To connect to host:
+5b. Enter "remote.SSH.showLoginTerminal" and toggle the option.
+
+6. Connect to wanted cluster via your login information
+
+7. To connect to host:
 
 `> Remote-SSH : Connect to host`
 
-7. Enter password at top pop-up.
+8. Enter password at top (or bottom) pop-up.
 
 Slide up the hidden terminal on the bottom and there’s your terminal with all the settings you set in your ~/.bashrc
 
@@ -185,9 +189,9 @@ If you click the file tab on the left, you can list a file directory of your cho
 
 `module load r/4.3.1`
 
-3. Run an r session in the terminal
+3. Run an R session in the terminal
 
-`r`
+`R`
 
 4. While in R, enter this command
 
@@ -216,6 +220,9 @@ then answer `n`
 Note: you will need to update this value when you want to update your R.
 
 To use R, don't forget the select the R terminal on the top right of your terminal section.
+
+
+
 
 
 
