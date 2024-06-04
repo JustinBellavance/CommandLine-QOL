@@ -195,7 +195,7 @@ If you click the file tab on the left, you can list a file directory of your cho
 
 4. While in R, enter this command
 
-`install.packges("languageserver") # this will take about 6-8 minutes`
+`install.packages("languageserver") # this will take about 6-8 minutes`
 
 then select yes to both options, then enter 13 to select a Canadian mirror to install from.
 
